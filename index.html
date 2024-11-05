@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+    <title>API de Calendários</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./JS/API_CALENDAR.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <h1>Exemplo de Consumo da API de Calendários</h1>
+    
+    <div class="conteudo">
+        <table border="1px" style="border-spacing: 4px;">
+            <tr>
+                <th colspan="4">CALENDÁRIOS DISPONÍVEIS</th>
+            </tr>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Data Máxima</th>
+                <th>Data Mínima</th>
+            </tr>
+            <tr>
+                <td>br-BC <b>*</b></td>
+                <td>Brasil - Banco Central</td>
+                <td>2105-11-20 00:00:00</td>
+                <td>1950-02-20 00:00:00</td>
+            </tr>
+            <tr>
+                <td>br-SP</td>
+                <td>Brasil - São Paulo</td>
+                <td>2105-11-20 00:00:00</td>
+                <td>2001-01-01 00:00:00</td>
+            </tr>
+            <tr>
+                <td>us-NYC</td>
+                <td>Estados Unidos - Nova Iorque</td>
+                <td>2070-12-25 00:00:00</ d>
+                <td>1999-12-31 00:00:00</ d>
+            </tr>
+            <tr>
+                <td>gb-LND</td>
+                <td>Inglaterra - Londres</td>
+                <td>2070-08-25 00:00:00</td>
+                <td>2000-01-03 00:00:00</td>
+            </tr>
+        </table>
+    
+        <p class="legenda-table">* Mais indicado por abranger maior tempo</p>
+        
+        <br>
+        <fieldset>
+            <legend class="centralizar">Adição de Dias Úteis a uma Data</legend>
+
+            <p>
+                <label for="calendar">Calendário</label>
+                <input type="text" id="calendar" value="br-BC" disabled/> <br>
+                
+                <label for="initialDate">Data Inicial</label>
+                <input type="date" id="initialDate" /> <br>
+                
+                <label for="term">Prazo (dias úteis)</label>
+                <input type="number" id="term" step="1" value="21" /> <br>
+            </p>
+
+            <input type="button" id="calculate" value="Calcular" />
+
+            <h3 class="centralizar">Resultado</h3>
+            <p>
+                <label for="finalDate">Data Final</label>
+                <input type="date" id="finalDate" readonly="readonly" />
+            </p>
+        </fieldset>
+    
+
+    <fieldset>
+        <legend class="centralizar">Prazo em dias úteis</legend>
+
+        <p>
+            <label for="calendar">Calendário</label>
+            <input type="text" id="calendarDelta" value="br-BC" /> <br>
+
+            <label for="initialDateDelta">Data Inicial</label>
+            <input type="date" id="initialDateDelta" /> <br>
+
+            <label for="finalDateDelta">Data Final</label>
+            <input type="date" id="finalDateDelta"  />
+            
+        </p>
+
+        <input type="button" id="calculateDelta" value="Calcular" />
+
+        <h3 class="centralizar">Resultado</h3>
+        <p>
+            <label for="termDelta">Prazo (dias úteis)</label>
+            <input type="number" id="termDelta" readonly="readonly" step="1" /> <br>
+
+            <label for="termDeltaActual">Prazo (dias corridos)</label>
+            <input type="number" id="termDeltaActual" readonly="readonly" step="1" />
+        </p>
+    </fieldset>
+
+    <p>Links potencialmente úteis quanto ao consumo dessa API:</p>
+    <ul>
+        <li><a href="https://elekto.com.br/Blog/ManualDoUsuarioDaCalculadoraDePrazos">Manual de Usuário</a> da Calculadora de Prazos</li>
+        <li>Manual da <a href="https://elekto.com.br/Blog/ComoConsumirApiDeCalendarios">API</a> da Calculadora de Prazos</li>
+        <li>Documentação jQuery sobre a função <a href="https://api.jquery.com/jQuery.getJSON/">getJSON</a></li>        
+    </ul>
+</div>
+</body>
+</html>
