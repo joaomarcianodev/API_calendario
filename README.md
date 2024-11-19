@@ -1,4 +1,4 @@
-# consumo-API_calendario
+# Consumo de uma API de Calendario
 Consumo de uma API para a disciplina de Redes de Computadores.
 
 ## Links potencialmente úteis quanto ao consumo dessa API:
